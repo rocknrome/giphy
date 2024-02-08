@@ -1,7 +1,8 @@
 Here is a working version of the Giphy App
 
 Your task is:
-Go to the Giphy docs HERE, read them, create an account abd get your Free API key.
+Go to the Giphy docs HERE:( https://developers.giphy.com/explorer/?ar=1 ),
+read them, create an account abd get your Free API key.
 
 Diagram your App:
 
