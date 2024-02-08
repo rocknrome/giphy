@@ -16,3 +16,7 @@ No gifs will be fetched on intial page load
 An application that renders a button on page load.
 On Button click make an API call and retrieve/render a single random GIF
 Done? You are awesome! Here is your 🍪
+
+DIAGRAM:
+
+![Diagram](https://github.com/rocknrome/giphy/assets/126816805/71b5ba9c-bc30-4053-a07d-d89ab8e9c916)
