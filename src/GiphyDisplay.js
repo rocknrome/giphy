@@ -1,12 +1,13 @@
+// GiphyDisplay.js
 import React from "react";
 
 function GiphyDisplay({ gifUrl }) {
     return  (
-        <div>
-            <img src={gifUrl} alt="Random Gif" />
+        <div className="giphy-display">
+            <img src={gifUrl} alt="Random Gif" className="giphy-image" />
         </div>
     );
 
 }
 
-export default GiphyDisplay
+export default GiphyDisplay;

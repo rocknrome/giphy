@@ -1,20 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import { useState } from 'react';
-import GiphyButton from './GiphyButton'; {/*importing Gyphy button component*/}
-import GiphyDisplay from './GiphyDisplay'; {/*importing Gyphy display component*/}
-
+// App.js
+import React, { useState, useEffect } from 'react';
+import GiphyDisplay from './GiphyDisplay';
+import GiphyButton from './GiphyButton';
+import { Card, Typography } from '@mui/material';
 
 function App() {
+  const [gifUrl, setGifUrl] = useState('');
 
-  const fetchRandomGif = null; //placeholder for now
+  useEffect(() => {
+    fetchRandomGif();
+  }, []);
+
+  const fetchRandomGif = async () => {
+    try {
+      const response = await fetch('https://api.giphy.com/v1/gifs/random?api_key=SPvpUVoz1FltPs42RZupIiPChMN6RdaX&tag=&rating=g');
+      const data = await response.json();
+      const imageUrl = data.data.images.original.url;
+      setGifUrl(imageUrl);
+    } catch (error) {
+      console.error('There is an error fetching GIF', error);
+    }
+  };
 
   return (
     <div className="App">
-      <h1>GIPHY</h1>
-      <GiphyButton fetchRandomGif={fetchRandomGif}/>  {/*Giphy button component*/}
-      
+      <Card variant="outlined" className="card">
+        <Typography variant="h4" component="h1" gutterBottom>
+          GIPHY
+        </Typography>
+        <GiphyButton fetchRandomGif={fetchRandomGif} />
+        <GiphyDisplay gifUrl={gifUrl} />
+      </Card>
     </div>
   );
 }

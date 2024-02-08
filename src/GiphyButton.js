@@ -1,8 +1,12 @@
+// GiphyButton.js
 import React from "react";
+import Button from '@mui/material/Button';
 
 function GiphyButton({ fetchRandomGif }) {
     return (
-        <button onClick={fetchRandomGif}>Get Random GIF</button>
+        <Button variant="contained" onClick={fetchRandomGif} fullWidth>
+          Get Random GIF
+        </Button>
     );
 }
 
