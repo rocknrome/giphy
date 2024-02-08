@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
 import GiphyButton from './GiphyButton'; {/*importing Gyphy button component*/}
+import GiphyDisplay from './GiphyDisplay'; {/*importing Gyphy display component*/}
 
 
 function App() {
